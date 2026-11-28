@@ -14,7 +14,10 @@
   "main": "cypress.config.js",
   "scripts": {
     "test-firefox": "npx cypress run --browser firefox",
-    "test-chrome": "npx cypress run --browser chrome"
+    "test-chrome": "npx cypress run --browser chrome",
+    "test-suite-1": "npx cypress run --spec \"cypress/e2e/1-getting-started/*\"",
+    "test-suite-2": "npx cypress run --spec \"cypress/e2e/2-advanced-examples/*\"",
+    "test-suite-3": "npx cypress run --spec \"cypress/e2e/3-parallel/*\""
   },
   "devDependencies": {
     "cypress": "^16.3.0"

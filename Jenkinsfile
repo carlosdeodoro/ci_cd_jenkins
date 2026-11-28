@@ -26,6 +26,24 @@ pipeline {
                         bat 'npm run test-firefox'
                     }
                 }
+                stage('Run Test Suite 1') {
+                    steps {
+                        echo 'Running Test Suite 1'
+                        bat 'npm run test-suite-1'
+                    }
+                }
+                stage('Run Test Suite 2') {
+                    steps {
+                        echo 'Running Test Suite 2'
+                        bat 'npm run test-suite-2'
+                    }
+                }
+                stage('Run Test Suite 3') {
+                    steps {
+                        echo 'Running Test Suite 3'
+                        bat 'npm run test-suite-3'
+                    }
+                }
             }
         }
     }
