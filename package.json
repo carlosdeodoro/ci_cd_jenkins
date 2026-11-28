@@ -13,7 +13,8 @@
   "type": "commonjs",
   "main": "cypress.config.js",
   "scripts": {
-    "test": "npx cypress run --browser chrome"
+    "test-firefox": "npx cypress run --browser firefox",
+    "test-chrome": "npx cypress run --browser chrome"
   },
   "devDependencies": {
     "cypress": "^16.3.0"

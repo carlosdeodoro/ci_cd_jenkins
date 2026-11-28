@@ -13,9 +13,19 @@ pipeline {
             }
         }
         stage('Run Cypress Tests') {
-            steps {
-                echo 'Running Cypress tests'
-                bat 'npm test'
+            parallel {
+                stage('Run Tests in Chrome') {
+                    steps {
+                        echo 'Running Cypress tests in Chrome'
+                        bat 'npm run test-chrome'
+                    }
+                }
+                stage('Run Tests in Firefox') {
+                    steps {
+                        echo 'Running Cypress tests in Firefox'
+                        bat 'npm run test-firefox'
+                    }
+                }
             }
         }
     }
